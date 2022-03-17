@@ -1,8 +1,19 @@
-<h1>list Table</h1>
 
-<ul>
-  <% @lists.each do |list|%>
-    <li><%= link_to list.name, list_path(list) %>
-    </li>
-  <% end %>
-</ul>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1608170825938-a8ea0305d46c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3125&q=80s);">
+    <div class="container">
+      <h1>CineFi <strong>allows</strong> you <strong>to store your most liked movies </strong>!</h1>
+      <%# <p>Change your life and learn to code at one of our campuses around the world.</p> %>
+      <%# <a class="btn btn-flat" href="#">Apply now</a> %>
+    </div>
+  </div>
+<div class="container">
+  <div class="row">
+    <% @lists.each do |list|%>
+      <div class="col-4 my-5">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+          <%= link_to list.name, list_path(list) %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
